@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sg.edu.nus.team7adproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".UI.UI1Activity" />
+        <activity android:name=".UI.UI2Activity" />
+        <activity android:name=".UI.UI3Activity" />
+        <activity android:name=".UI.UI4Activity" />
+        <activity android:name=".UI.UI5Activity" />
+        <activity android:name=".UI.UI6Activity" />
+        <activity
+            android:name=".StoreSupActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".DepartmentHeadActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".StoreClerkActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".DepartmentStaffActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+        <service
+            android:name=".ServerService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".HomeActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

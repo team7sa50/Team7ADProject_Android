@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_store_clerk"
+    app:startDestination="@+id/nav_store_department_requests">
+
+    <fragment
+        android:id="@+id/nav_store_department_requests"
+        android:name="sg.edu.nus.team7adproject.Store.StoreDepartmentRequestsFragment"
+        android:label="Department Requests"
+        tools:layout="@layout/fragment_store_department_requests">
+        <action
+            android:id="@+id/action_nav_store_department_requests_to_nav_store_department_request_detail"
+            app:destination="@id/nav_store_department_request_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_store_stationery_retrieval_list"
+        android:name="sg.edu.nus.team7adproject.Store.StoreStationeryRetrievalListFragment"
+        android:label="Stationery Retrieval List"
+        tools:layout="@layout/fragment_store_stationery_retrieval_list" >
+        <action
+            android:id="@+id/action_nav_store_stationery_retrieval_list_to_nav_store_department_request_detail"
+            app:destination="@id/nav_store_department_request_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_store_disbursement_lists"
+        android:name="sg.edu.nus.team7adproject.Store.StoreDisbursementListFragment"
+        android:label="Disbursement List"
+        tools:layout="@layout/fragment_store_disbursement_list" >
+        <action
+            android:id="@+id/action_nav_store_disbursement_lists_to_nav_store_department_request_detail"
+            app:destination="@id/nav_store_department_request_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_stock_list"
+        android:name="sg.edu.nus.team7adproject.Store.StockListFragment"
+        android:label="Stock List"
+        tools:layout="@layout/fragment_stock_list" >
+        <action
+            android:id="@+id/action_nav_stock_list_to_nav_stock_detail"
+            app:destination="@id/nav_stock_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_stock_detail"
+        android:name="sg.edu.nus.team7adproject.Store.StockDetailFragment"
+        android:label="Stock Detail"
+        tools:layout="@layout/fragment_stock_detail" >
+        <argument
+            android:name="stationeryId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_adjustment_vouchers"
+        android:name="sg.edu.nus.team7adproject.Store.AdjustmentVouchersFragment"
+        android:label="Adjustment Vouchers"
+        tools:layout="@layout/fragment_adjustment_vouchers" >
+        <action
+            android:id="@+id/action_nav_adjustment_vouchers_to_nav_adjustment_voucher_detail"
+            app:destination="@id/nav_adjustment_voucher_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add_adjustment_voucher"
+        android:name="sg.edu.nus.team7adproject.Store.AddAdjustmentVoucherFragment"
+        android:label="Add Adjustment Voucher"
+        tools:layout="@layout/fragment_add_adjustment_voucher" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_adjustment_voucher_detail"
+        android:name="sg.edu.nus.team7adproject.Store.AdjustmentVoucherDetailFragment"
+        android:label="Adjustment Voucher Detail"
+        tools:layout="@layout/fragment_adjustment_voucher_detail" >
+        <argument
+            android:name="adjustmentVoucherId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_store_orders"
+        android:name="sg.edu.nus.team7adproject.Store.StoreOrdersFragment"
+        android:label="Orders"
+        tools:layout="@layout/fragment_store_orders" >
+        <action
+            android:id="@+id/action_nav_store_orders_to_nav_order_detail"
+            app:destination="@id/nav_order_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_order_detail"
+        android:name="sg.edu.nus.team7adproject.Store.OrderDetailFragment"
+        android:label="Order Detail"
+        tools:layout="@layout/fragment_order_detail" >
+        <argument
+            android:name="orderId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add_order"
+        android:name="sg.edu.nus.team7adproject.Store.AddOrderFragment"
+        android:label="Add Order"
+        tools:layout="@layout/fragment_add_order" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="sg.edu.nus.team7adproject.Shared.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_nav_notifications_to_nav_notification_detail"
+            app:destination="@id/nav_notification_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_notification_detail"
+        android:name="sg.edu.nus.team7adproject.Shared.NotificationDetailFragment"
+        android:label="Notification Detail"
+        tools:layout="@layout/fragment_notification_detail" >
+        <argument
+            android:name="notificationStatusId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_scheduled_jobs"
+        android:name="sg.edu.nus.team7adproject.Store.ScheduledJobsFragment"
+        android:label="Scheduled Jobs"
+        tools:layout="@layout/fragment_scheduled_jobs" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="sg.edu.nus.team7adproject.Shared.LogoutFragment"
+        android:label="Logout"
+        tools:layout="@layout/fragment_logout" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_store_department_request_detail"
+        android:name="sg.edu.nus.team7adproject.Store.StoreDepartmentRequestDetailFragment"
+        android:label="Department Request Detail"
+        tools:layout="@layout/fragment_store_department_request_detail" >
+        <argument
+            android:name="departmentRequestId"
+            app:argType="integer" />
+    </fragment>
+</navigation>

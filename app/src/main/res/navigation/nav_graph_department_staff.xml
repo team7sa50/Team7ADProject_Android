@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_department_staff"
+    app:startDestination="@id/nav_staff_stationery_requests">
+    <fragment
+        android:id="@+id/nav_staff_stationery_requests"
+        android:name="sg.edu.nus.team7adproject.Department.StaffStationeryRequestsFragment"
+        android:label="Stationery Requests"
+        tools:layout="@layout/fragment_staff_stationery_requests" >
+        <action
+            android:id="@+id/action_nav_staff_stationery_requests_to_nav_stationery_request_detail"
+            app:destination="@id/nav_stationery_request_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_staff_department_requests"
+        android:name="sg.edu.nus.team7adproject.Department.StaffDepartmentRequestsFragment"
+        android:label="Department Requests"
+        tools:layout="@layout/fragment_staff_department_requests" >
+        <action
+            android:id="@+id/action_nav_staff_department_requests_to_nav_staff_department_request_detail"
+            app:destination="@id/nav_staff_department_request_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_staff_department_request_detail"
+        android:name="sg.edu.nus.team7adproject.Department.StaffDepartmentRequestDetailFragment"
+        android:label="Department Request Detail"
+        tools:layout="@layout/fragment_staff_department_request_detail" >
+        <argument
+            android:name="departmentRequestId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="sg.edu.nus.team7adproject.Shared.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_nav_notifications_to_nav_notification_detail"
+            app:destination="@id/nav_notification_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_notification_detail"
+        android:name="sg.edu.nus.team7adproject.Shared.NotificationDetailFragment"
+        android:label="Notification Detail"
+        tools:layout="@layout/fragment_notification_detail" >
+        <argument
+            android:name="notificationStatusId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="sg.edu.nus.team7adproject.Shared.LogoutFragment"
+        android:label="Logout"
+        tools:layout="@layout/fragment_logout" >
+    </fragment>
+    <fragment
+        android:id="@+id/nav_stationery_request_detail"
+        android:name="sg.edu.nus.team7adproject.Department.StationeryRequestDetailFragment"
+        android:label="Stationery Request Detail"
+        tools:layout="@layout/fragment_stationery_request_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_add_stationery_request"
+        android:name="sg.edu.nus.team7adproject.Department.AddStationeryRequestFragment"
+        android:label="Add Stationery Request"
+        tools:layout="@layout/fragment_add_stationery_request" />
+</navigation>

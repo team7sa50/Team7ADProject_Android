@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_store_department_requests"
+            android:title="Department Requests" />
+        <item
+            android:id="@+id/nav_store_stationery_retrieval_list"
+            android:title="Stationery Retrieval List" />
+        <item
+            android:id="@+id/nav_store_disbursement_lists"
+            android:title="Disbursement List" />
+        <item
+            android:id="@+id/nav_stock_list"
+            android:title="Stock List" />
+        <item
+            android:id="@+id/nav_adjustment_vouchers"
+            android:title="Adjustment Vouchers" />
+        <item
+            android:id="@+id/nav_store_orders"
+            android:title="Orders" />
+        <item
+            android:id="@+id/nav_notifications"
+            android:title="Notifications" />
+        <item
+            android:id="@+id/nav_scheduled_jobs"
+            android:title="Scheduled Jobs" />
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout" />
+    </group>
+</menu>
