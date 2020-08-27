@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal">
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+    <TableRow
+        android:id="@+id/table_header"
+        android:layout_width="match_parent"
+        android:background="@drawable/control_border"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/iv_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_margin="5dp"
+            android:paddingLeft="5dp"
+            android:text="Item Code"
+            android:textSize="15sp" />
+
+        <TextView
+            style="@style/disbursementTableCol"
+            android:id="@+id/iv_des"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:layout_margin="6dp"
+            android:paddingLeft="6dp"
+            android:text="@string/dis_description" />
+
+        <TextView
+            style="@style/disbursementTableCol"
+            android:id="@+id/iv_stock"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:paddingLeft="5dp"
+            android:gravity="end"
+            android:text="Stock" />
+
+        <TextView
+            style="@style/disbursementTableCol"
+            android:id="@+id/iv_unit"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingLeft="5dp"
+            android:gravity="end"
+            android:text="Unit" />
+
+        <TextView
+            style="@style/disbursementTableCol"
+            android:id="@+id/iv_location"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingLeft="5dp"
+            android:gravity="end"
+            android:text="Location" />
+
+        <TextView
+            style="@style/disbursementTableCol"
+            android:id="@+id/iv_price"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingLeft="5dp"
+            android:gravity="end"
+            android:text="price" />
+    </TableRow>
+    </TableLayout>
+</LinearLayout>
